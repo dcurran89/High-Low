@@ -7,7 +7,8 @@ $numberGuess = 0;
 do{
 fwrite(STDOUT, "Guess a number 0 - 100! \n");
 $guess = trim(fgets(STDIN));
-    if($guess >= 0 && $guess <= 100){
+$numeric = is_numeric($guess);
+    if($guess >= 0 && $guess <= 100 && $numeric){
         echo "\n";
         $numberGuess++;
 
